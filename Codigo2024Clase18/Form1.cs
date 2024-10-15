@@ -25,6 +25,22 @@ namespace Codigo2024Clase18
 
             dgvProductos.DataSource = productos;
 
+
+            List<Almacen> almacenes = new List<Almacen>();
+
+            for (int i = 0; i < 20; i++)
+            {
+                almacenes.Add(new
+                    Almacen
+                {
+                     AlmacenID = i,
+                    Ubicacion = "Ubicacion",      
+                    Precio = 200
+                });
+            }
+
+            dgvAlmacen.DataSource = almacenes;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)

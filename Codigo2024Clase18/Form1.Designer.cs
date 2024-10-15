@@ -29,11 +29,16 @@
         private void InitializeComponent()
         {
             dgvProductos = new DataGridView();
-            btnListar = new Button();
             NombreColumna = new DataGridViewTextBoxColumn();
             Precio = new DataGridViewTextBoxColumn();
             Descripcion = new DataGridViewTextBoxColumn();
+            btnListar = new Button();
+            dgvAlmacen = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            Ubicacion = new DataGridViewTextBoxColumn();
+            PrecioAlmacen = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlmacen).BeginInit();
             SuspendLayout();
             // 
             // dgvProductos
@@ -43,18 +48,8 @@
             dgvProductos.Location = new Point(30, 199);
             dgvProductos.Name = "dgvProductos";
             dgvProductos.RowHeadersWidth = 51;
-            dgvProductos.Size = new Size(749, 211);
+            dgvProductos.Size = new Size(434, 211);
             dgvProductos.TabIndex = 0;
-            // 
-            // btnListar
-            // 
-            btnListar.Location = new Point(646, 109);
-            btnListar.Name = "btnListar";
-            btnListar.Size = new Size(133, 53);
-            btnListar.TabIndex = 1;
-            btnListar.Text = "Listar";
-            btnListar.UseVisualStyleBackColor = true;
-            btnListar.Click += btnListar_Click;
             // 
             // NombreColumna
             // 
@@ -80,17 +75,63 @@
             Descripcion.Name = "Descripcion";
             Descripcion.Width = 125;
             // 
+            // btnListar
+            // 
+            btnListar.Location = new Point(646, 109);
+            btnListar.Name = "btnListar";
+            btnListar.Size = new Size(133, 53);
+            btnListar.TabIndex = 1;
+            btnListar.Text = "Listar";
+            btnListar.UseVisualStyleBackColor = true;
+            btnListar.Click += btnListar_Click;
+            // 
+            // dgvAlmacen
+            // 
+            dgvAlmacen.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAlmacen.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, Ubicacion, PrecioAlmacen });
+            dgvAlmacen.Location = new Point(493, 199);
+            dgvAlmacen.Name = "dgvAlmacen";
+            dgvAlmacen.RowHeadersWidth = 51;
+            dgvAlmacen.Size = new Size(434, 211);
+            dgvAlmacen.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.DataPropertyName = "Nombre";
+            dataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // Ubicacion
+            // 
+            Ubicacion.DataPropertyName = "Ubicacion";
+            Ubicacion.HeaderText = "Ubicacion";
+            Ubicacion.MinimumWidth = 6;
+            Ubicacion.Name = "Ubicacion";
+            Ubicacion.Width = 125;
+            // 
+            // PrecioAlmacen
+            // 
+            PrecioAlmacen.DataPropertyName = "Precio";
+            PrecioAlmacen.HeaderText = "Precio";
+            PrecioAlmacen.MinimumWidth = 6;
+            PrecioAlmacen.Name = "PrecioAlmacen";
+            PrecioAlmacen.Width = 125;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1105, 450);
+            Controls.Add(dgvAlmacen);
             Controls.Add(btnListar);
             Controls.Add(dgvProductos);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlmacen).EndInit();
             ResumeLayout(false);
         }
 
@@ -101,5 +142,9 @@
         private DataGridViewTextBoxColumn NombreColumna;
         private DataGridViewTextBoxColumn Precio;
         private DataGridViewTextBoxColumn Descripcion;
+        private DataGridView dgvAlmacen;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn Ubicacion;
+        private DataGridViewTextBoxColumn PrecioAlmacen;
     }
 }
