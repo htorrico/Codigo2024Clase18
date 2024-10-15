@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnEliminarBinding = new Button();
+            btnAgregarBinding = new Button();
+            btnBinding = new Button();
             btnListar = new Button();
             btnAgregar = new Button();
             chkBecado = new CheckBox();
@@ -53,6 +56,9 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.ActiveCaption;
+            groupBox1.Controls.Add(btnEliminarBinding);
+            groupBox1.Controls.Add(btnAgregarBinding);
+            groupBox1.Controls.Add(btnBinding);
             groupBox1.Controls.Add(btnListar);
             groupBox1.Controls.Add(btnAgregar);
             groupBox1.Controls.Add(chkBecado);
@@ -70,10 +76,43 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos del Estudiante";
             // 
+            // btnEliminarBinding
+            // 
+            btnEliminarBinding.BackColor = Color.CadetBlue;
+            btnEliminarBinding.Location = new Point(675, 248);
+            btnEliminarBinding.Name = "btnEliminarBinding";
+            btnEliminarBinding.Size = new Size(94, 37);
+            btnEliminarBinding.TabIndex = 11;
+            btnEliminarBinding.Text = "Eliminar";
+            btnEliminarBinding.UseVisualStyleBackColor = false;
+            btnEliminarBinding.Click += btnEliminarBinding_Click;
+            // 
+            // btnAgregarBinding
+            // 
+            btnAgregarBinding.BackColor = Color.CadetBlue;
+            btnAgregarBinding.Location = new Point(575, 248);
+            btnAgregarBinding.Name = "btnAgregarBinding";
+            btnAgregarBinding.Size = new Size(94, 37);
+            btnAgregarBinding.TabIndex = 10;
+            btnAgregarBinding.Text = "Agregar";
+            btnAgregarBinding.UseVisualStyleBackColor = false;
+            btnAgregarBinding.Click += btnAgregarBinding_Click;
+            // 
+            // btnBinding
+            // 
+            btnBinding.BackColor = Color.CadetBlue;
+            btnBinding.Location = new Point(475, 248);
+            btnBinding.Name = "btnBinding";
+            btnBinding.Size = new Size(94, 37);
+            btnBinding.TabIndex = 9;
+            btnBinding.Text = "Binding";
+            btnBinding.UseVisualStyleBackColor = false;
+            btnBinding.Click += btnBinding_Click;
+            // 
             // btnListar
             // 
             btnListar.BackColor = Color.DodgerBlue;
-            btnListar.Location = new Point(361, 248);
+            btnListar.Location = new Point(164, 248);
             btnListar.Name = "btnListar";
             btnListar.Size = new Size(94, 37);
             btnListar.TabIndex = 8;
@@ -84,7 +123,7 @@
             // btnAgregar
             // 
             btnAgregar.BackColor = Color.DodgerBlue;
-            btnAgregar.Location = new Point(250, 248);
+            btnAgregar.Location = new Point(53, 248);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(94, 37);
             btnAgregar.TabIndex = 7;
@@ -247,5 +286,8 @@
         private DataGridViewTextBoxColumn Apellidos;
         private DataGridViewTextBoxColumn FechaMatricula;
         private DataGridViewCheckBoxColumn EsBecado;
+        private Button btnBinding;
+        private Button btnEliminarBinding;
+        private Button btnAgregarBinding;
     }
 }
