@@ -110,7 +110,41 @@ namespace Codigo2024Clase18
         private void btnEliminarBinding_Click(object sender, EventArgs e)
         {
             int elementoFinal = estudiantesBinding.Count;
-            estudiantesBinding.RemoveAt(elementoFinal-1);
+            estudiantesBinding.RemoveAt(elementoFinal - 1);
+        }
+
+        private void btnContar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(estudiantesBinding.Count.ToString());
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (estudiantesBinding.Count == 3)
+            {
+                timer1.Stop();
+            }
+            MessageBox.Show(estudiantesBinding.Count.ToString());
+        }
+
+        private void frmEstudiante_Load(object sender, EventArgs e)
+        {
+            timerHora.Start();
+        }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void btnDetener_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+        }
+
+        private void timerHora_Tick(object sender, EventArgs e)
+        {
+            LBLHORA.Text=DateTime.Now.ToLocalTime().ToString();
         }
     }
 }
